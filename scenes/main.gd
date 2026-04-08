@@ -24,18 +24,24 @@ func _ready() -> void:
 		#add_child(square_instance)
 	
 	#makeCircle(16)
-	makeCircleR(21)
+	makeCircleR(11)
 
 
 func makeCircleR(radius: int) -> void:
 	var coords = []
 	
-	for i in range(-radius, radius+1):
-		for j in range(-radius, radius+1):
+	for i in range(1, radius+1):
+		for j in range(0, radius+1):
 			if (j == 0):
 				coords.push_back(Vector2(i, 0))
+				coords.push_back(Vector2(0, i))
+				coords.push_back(Vector2(-i, 0))
+				coords.push_back(Vector2(0, -i))
 			if (pow(i,2) + pow(j,2) <= pow(radius,2) + (float(radius)/2)):
 				coords.push_back(Vector2(i, j))
+				coords.push_back(Vector2(-i, j))
+				coords.push_back(Vector2(i, -j))
+				coords.push_back(Vector2(-i, -j))
 	
 	
 	
