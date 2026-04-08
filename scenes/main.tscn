@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ddgx3l074gq1f"]
+
+[ext_resource type="Script" uid="uid://soyb451evbgt" path="res://scenes/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://ckuptjvyjnjw7" path="res://scenes/square.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://dnmkl28ks5mwf" path="res://scenes/camera_2d.gd" id="3_sugp2"]
+
+[node name="Node2D" type="Node2D" unique_id=1160146792]
+script = ExtResource("1_o5qli")
+square_scene = ExtResource("2_0wfyh")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1343920246]
+script = ExtResource("3_sugp2")
